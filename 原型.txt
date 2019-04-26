@@ -1,0 +1,16 @@
+一、什么是原型：
+	在js中，我们创建一个函数A，浏览器就会在内存中自动创建一个对象B,而且每个都会有一个默认的属性prototype,prototype指向对象B,对象B就是函数A的原型对象,简称函数的原型
+
+二、prototype和constructor的关系 
+
+	prototype是函数的默认属性，这个属性是一个对象，对象又有一个属性 constructor,constructor值指向函数本身
+
+	优点：所有的实例化对象都可以共享原型对象的属性和方法
+
+三、原型,构造函数和实例三者之间的关系 
+	在声明构造函数时，浏览器会自动生成一个属性prototype,这个属性的值是一个对象，prototype本身又默认一个属性contructor,contructor的值是这个构造函数
+       在利用构造函数实例化对象时，实例化的对象会自动有一个默认的属性__proto__,这个proto的值指向构造函数原型对象 prototype,
+
+四、hasOwnProperty()方法
+	用来判断某个对象是否含有指定的自身属性
+五、 使用in 只要通过对象能访问的属性就返回true，包含原型定义的属性
